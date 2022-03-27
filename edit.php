@@ -58,6 +58,7 @@
     </div>
     <div class="d-grid gap-2">
       <button type="submit" name="submit" class="btn btn-block btn-success">Save</button>
+      <a href="viewrecords.php" class="btn btn-default ">Back</a>
       </div>
 </form>
         <?php } ?>
