@@ -17,11 +17,16 @@
 
         }
         
-        //imclude the crud file here after connecting to the databse
+        //include the crud file here after connecting to the databse
 
         require_once 'crud.php';
+        require_once 'user.php';
 
         $crud = new crud($pdo);
+        $user = new user($pdo);
+        $user->insertuser("admin","password");
+
+
 
 
 ?>
