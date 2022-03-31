@@ -44,6 +44,11 @@ $results = $crud ->getSpecialties();
       <input required type="Text" class="form-control" id="phone" name="phone" aria-describedby="phoneHelp">
       <div id="phoneHelp" class="form-text">We'll never share your number with anyone else.</div>
     </div>
+    <div class=" mb-3 ">
+            <input type="file" accept="image/*" class="form-control custom-file-input" id="avatar" name="avatar" >
+            <small id="avatar" class="form-text text-danger">File Upload is Optional</small>
+
+        </div>
     <div class="d-grid gap-2">
       <button type="submit" name="submit" class="btn btn-block btn-primary">Submit</button>
       </div>
