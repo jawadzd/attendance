@@ -1,10 +1,23 @@
 <?php
 //we want to write a connection string
-        $host='127.0.0.1'; //or  $host = 'localhost';
+
+            //Development Connection
+            $host = 'sql11.freesqldatabase.com';
+            $db = 'sql11482734';
+            $user = 'sql11482734';
+            $pass = 'pcf2rCQmSf';
+            $charset = 'utf8mb4';
+
+
+
+
+
+
+        /*$host='127.0.0.1'; //or  $host = 'localhost';
         $db='attendance_db';
         $user='root';
         $pass='';
-        $charset ='utf8mb4';
+        $charset ='utf8mb4';*/
 
         $dsn ="mysql:host=$host;dbname=$db;charset=$charset";
        

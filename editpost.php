@@ -1,4 +1,5 @@
 <?php
+ require_once 'includes/auth.php';
     require_once 'db/conn.php';
 
 if(isset($_POST['submit'])){
