@@ -9,11 +9,11 @@
             $this->db = $conn;
             
         }
-        public function insertAttendees($fname, $lname, $dob, $email,$contact,$specialty_id,$destination)
+        public function insertAttendees($fname, $lname, $dob, $email,$contact,$specialty_id,$avatar_path)
         {
             try {
-                $sql="INSERT INTO attende (firstname, lastname, dateofbirth, emailadress, contactnumber, specialty_id,destination) 
-                VALUES(:fname,:lname,:dob,:email,:contact,:specialty_id,:destination)";
+                $sql="INSERT INTO attende (firstname, lastname, dateofbirth, emailadress, contactnumber, specialty_id,avatar_path) 
+                VALUES(:fname,:lname,:dob,:email,:contact,:specialty_id,:avatar_path)";
                 $stmt = $this->db->prepare($sql);
 
                 $stmt->bindparam(':fname',$fname);
@@ -22,7 +22,7 @@
                 $stmt->bindparam(':email',$email);
                 $stmt->bindparam(':contact',$contact);
                 $stmt->bindparam(':specialty_id',$specialty_id);
-                $stmt->bindparam(':destination',$destination);
+                $stmt->bindparam(':avatar_path',$avatar_path);
 
 
                 $stmt->execute();

@@ -1,23 +1,23 @@
 <?php
 //we want to write a connection string
 
-            //Development Connection
+            /*Development Connection
             $host = 'sql11.freesqldatabase.com';
             $db = 'sql11482734';
             $user = 'sql11482734';
             $pass = 'pcf2rCQmSf';
-            $charset = 'utf8mb4';
+            $charset = 'utf8mb4';*/
 
 
 
 
 
 
-        /*$host='127.0.0.1'; //or  $host = 'localhost';
+        $host='127.0.0.1'; //or  $host = 'localhost';
         $db='attendance_db';
         $user='root';
         $pass='';
-        $charset ='utf8mb4';*/
+        $charset ='utf8mb4';
 
         $dsn ="mysql:host=$host;dbname=$db;charset=$charset";
        
@@ -37,7 +37,7 @@
 
         $crud = new crud($pdo);
         $user = new user($pdo);
-        $user->insertuser("admin","password");
+        $user->insertuser("jawad","theboss123");
 
 
 

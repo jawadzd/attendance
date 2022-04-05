@@ -2,13 +2,13 @@
 $title ='Index'; 
 require_once 'includes/header.php';
 require_once 'db/conn.php';
-$results = $crud ->getSpecialties();
+$results = $crud->getSpecialties();
 ?>
 
 
 <h1 class="text-center">Registraion for IT Conference</h1>
 
-<form method="post" action="success.php">
+<form enctype="multipart/form-data" method="post" action="success.php">
     <div class="mb-3">
       <label for="firstname" class="form-label">First Name</label>
       <input required type="text" class="form-control" id="firstname" name="firstname" >
@@ -46,6 +46,7 @@ $results = $crud ->getSpecialties();
     </div>
     <div class=" mb-3 ">
             <input type="file" accept="image/*" class="form-control custom-file-input" id="avatar" name="avatar" >
+            <label class="custom-file-label" for="avatar"></label>
             <small id="avatar" class="form-text text-danger">File Upload is Optional</small>
 
         </div>

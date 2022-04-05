@@ -20,7 +20,7 @@
 
 <div class=" text-center card-body card">
         <div class="card-body">
-        <img src="<?php echo empty($result['avatr_path'])?"uploads/blank.png": $result['avatr_path'] ; ?>" clss="rounded-circle" style="width: 20%; height:20% "/>
+        <img src="<?php echo empty($result['avatar_path']) ? "uploads/blank.png" : $result['avatar_path'] ; ?>"  style="width: 20%; height:20% "/>
             <h5 class="card-title"><?php echo $result['firstname'].'   '. $result['lastname'];?></h5>
             <h6 class="card-subtitle mb-2 text-muted"><?php echo $result['name'];?></h6>
             <br>
