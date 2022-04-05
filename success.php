@@ -9,16 +9,18 @@
         $email=$_POST['email'];
         $contact = $_POST['phone'];
         $specialty_id = $_POST['specialty_id'];
-
-
-        
-        //file upload
-        $orig_file = $_FILES["avatar"]["tmp_name"];
-        $ext = pathinfo($_FILES["avatar"]["name"], PATHINFO_EXTENSION);
-        $target_dir = 'uploads/';
-        $destination = "$target_dir$contact.$ext";
-        move_uploaded_file($orig_file,$destination);}
        
+
+        if (empty($_FILES["avatar"]["tmp_name"]) == true){
+            
+        $destination='uploads/blank.png';
+        }else {
+            $orig_file = $_FILES["avatar"]["tmp_name"];
+            $ext = pathinfo($_FILES["avatar"]["name"], PATHINFO_EXTENSION);
+            $target_dir = 'uploads/';
+            $destination = "$target_dir$contact.$ext";
+            move_uploaded_file($orig_file,$destination);
+        }
 
        
         $isSuccess=$crud->insertAttendees($fname,$lname,$dob,$email,$contact,$specialty_id,$destination);
@@ -29,7 +31,7 @@
             include 'includes/errormsg.php';
 
         }
-    
+    }
 ?>
 
 
