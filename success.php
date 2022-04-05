@@ -11,13 +11,16 @@
         $specialty_id = $_POST['specialty_id'];
 
 
-
+        if(isset($_POST['avatar'])){
         //file upload
         $orig_file = $_FILES["avatar"]["tmp_name"];
         $ext = pathinfo($_FILES["avatar"]["name"], PATHINFO_EXTENSION);
         $target_dir = 'uploads/';
         $destination = "$target_dir$contact.$ext";
-        move_uploaded_file($orig_file,$destination);
+        move_uploaded_file($orig_file,$destination);}
+        else {
+            $destination ='uploads/blank.png';
+        }
 
        
         $isSuccess=$crud->insertAttendees($fname,$lname,$dob,$email,$contact,$specialty_id,$destination);
