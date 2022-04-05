@@ -37,7 +37,7 @@
 
         $crud = new crud($pdo);
         $user = new user($pdo);
-        $user->insertuser("jawad","theboss123");
+        $user->insertuser("malak","i am poco loco");
 
 
 
